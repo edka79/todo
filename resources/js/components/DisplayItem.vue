@@ -50,14 +50,14 @@
         methods: {
             fetchItems()
             {
-              let uri = 'http://laravel.test/items';
+              let uri = 'https://test.toster.site/public/items';
               this.axios.get(uri).then((response) => {
                   this.items = response.data;
               });
             },
             deleteItem(id)
             {
-              let uri = `http://laravel.test/items/${id}`;
+              let uri = `https://test.toster.site/public/items/${id}`;
               this.items.splice(id, 1);
               this.axios.delete(uri);
             }

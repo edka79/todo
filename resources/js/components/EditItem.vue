@@ -27,6 +27,7 @@
             </div>
             
             <div class="form-group">
+                <br>
                 <button class="btn btn-primary">Обновить</button>
             </div>
         </form>
@@ -51,14 +52,14 @@
         methods: {
             getItem()
             {
-              let uri = `http://laravel.test/items/${this.$route.params.id}/edit`;
+              let uri = `https://test.toster.site/public/items/${this.$route.params.id}/edit`;
                 this.axios.get(uri).then((response) => {
                     this.item = response.data;
                 });
             },
             updateItem()
             {
-              let uri = 'http://laravel.test/items/'+this.$route.params.id;
+              let uri = 'https://test.toster.site/public/items/'+this.$route.params.id;
                 this.axios.patch(uri, this.item).then((response) => {
                   this.$router.push({name: 'DisplayItem'});
                 });

@@ -55,7 +55,7 @@
     },
     methods: {
       addItem(){
-        let uri = 'http://laravel.test/items';
+        let uri = 'https://test.toster.site/public/items';
         this.axios.post(uri, this.item).then((response) => {
           this.$router.push({name: 'DisplayItem'})
         })
